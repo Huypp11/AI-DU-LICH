@@ -1,0 +1,11 @@
+{
+  "name": "travel-server",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js",
+    "eval": "node eval/run.js",
+    "eval:plan": "node eval/plan-eval.js"
+  },
+  "dependencies": { "cors": "^2.8.5", "dotenv": "^16.4.5", "express": "^4.19.2" }
+}

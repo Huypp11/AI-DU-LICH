@@ -1,0 +1,68 @@
+// Dữ liệu địa điểm MẪU (giá/thời lượng xấp xỉ). 
+// p(tên, khu vực, giờ tham quan, chi phí/người (VND), rating 1-5, nhãn sở thích)
+const p = (name, area, hours, cost, rating, tags) => ({ name, area, hours, cost, rating, tags });
+
+export const PLACES = {
+  'da-nang': [
+    p('Bà Nà Hills', 'Bà Nà', 6, 900000, 4.5, ['nature','family','adventure']),
+    p('Ngũ Hành Sơn', 'Ngũ Hành Sơn', 2, 40000, 4, ['culture','nature']),
+    p('Bán đảo Sơn Trà', 'Sơn Trà', 3, 0, 4.5, ['nature','adventure']),
+    p('Bãi biển Mỹ Khê', 'Biển', 2, 0, 4.5, ['beach','relax','family']),
+    p('Cầu Rồng & sông Hàn', 'Trung tâm', 1.5, 0, 4, ['nightlife','romantic']),
+    p('Bảo tàng Chăm', 'Trung tâm', 1.5, 60000, 4, ['culture']),
+    p('Chợ Hàn & ẩm thực', 'Trung tâm', 2, 150000, 4, ['food']),
+    p('Công viên Châu Á', 'Trung tâm', 3, 200000, 3.5, ['family','nightlife']),
+  ],
+  'hoi-an': [
+    p('Phố cổ Hội An', 'Phố cổ', 3, 120000, 5, ['culture','romantic']),
+    p('Chợ đêm Nguyễn Hoàng', 'Phố cổ', 2, 100000, 4, ['nightlife','food']),
+    p('Lớp học nấu ăn Trà Quế', 'Trà Quế', 3, 400000, 4.5, ['food','culture']),
+    p('Làng rau Trà Quế', 'Trà Quế', 2, 50000, 4, ['nature','relax']),
+    p('Bãi biển An Bàng', 'An Bàng', 3, 0, 4.5, ['beach','relax']),
+    p('Rừng dừa Bảy Mẫu', 'Bảy Mẫu', 3, 250000, 4.5, ['nature','adventure','family']),
+    p('Thánh địa Mỹ Sơn', 'Mỹ Sơn', 4, 150000, 4.5, ['culture','adventure']),
+    p('Làng gốm Thanh Hà', 'Thanh Hà', 2, 60000, 3.5, ['culture','family']),
+  ],
+  'da-lat': [
+    p('Hồ Xuân Hương & chợ Đà Lạt', 'Trung tâm', 2, 0, 4, ['romantic','food','relax']),
+    p('Phố đêm & ẩm thực', 'Trung tâm', 2, 100000, 4, ['nightlife','food']),
+    p('Dinh Bảo Đại', 'Trung tâm', 1.5, 40000, 3.5, ['culture']),
+    p('Thung lũng Tình Yêu', 'Phía Bắc', 2, 100000, 3.5, ['romantic','family']),
+    p('Đồi chè Cầu Đất', 'Cầu Đất', 3, 50000, 4.5, ['nature','romantic','relax']),
+    p('Núi Langbiang', 'Langbiang', 4, 100000, 4.5, ['adventure','nature']),
+    p('Thác Datanla', 'Datanla', 3, 150000, 4, ['adventure','family','nature']),
+    p('Chùa Linh Phước & ga Đà Lạt', 'Phía Đông', 2.5, 50000, 4, ['culture','relax']),
+  ],
+  'phu-quoc': [
+    p('Bãi Sao', 'Bãi Sao', 3, 0, 4.5, ['beach','relax','family']),
+    p('Vinpearl Safari', 'Bắc đảo', 5, 650000, 4.5, ['family','nature']),
+    p('Vườn quốc gia Phú Quốc', 'Bắc đảo', 3, 50000, 4, ['nature','adventure']),
+    p('Cáp treo Hòn Thơm', 'An Thới', 4, 600000, 4.5, ['adventure','family','beach']),
+    p('Lặn ngắm san hô', 'An Thới', 4, 500000, 4.5, ['beach','adventure']),
+    p('Chợ đêm Dương Đông', 'Dương Đông', 2.5, 150000, 4, ['food','nightlife']),
+    p('Hoàng hôn Sunset Sanato', 'Dương Đông', 2, 0, 4.5, ['romantic','nightlife']),
+    p('Nhà thùng nước mắm', 'Dương Đông', 1.5, 0, 3.5, ['culture','food']),
+    p('Suối Tranh', 'Suối Tranh', 2, 40000, 3.5, ['nature','family']),
+  ],
+  'ha-noi': [
+    p('Hồ Gươm & phố cổ', 'Phố cổ', 3, 0, 4.5, ['culture','food']),
+    p('Phố đi bộ & bia hơi', 'Phố cổ', 2.5, 150000, 4, ['nightlife','food']),
+    p('Múa rối nước', 'Phố cổ', 1, 100000, 4, ['culture','family']),
+    p('Văn Miếu', 'Văn Miếu', 2, 30000, 4, ['culture']),
+    p('Lăng Bác & Hoàng Thành', 'Ba Đình', 3, 30000, 4.5, ['culture']),
+    p('Bảo tàng Dân tộc học', 'Cầu Giấy', 3, 40000, 4, ['culture','family']),
+    p('Hồ Tây', 'Hồ Tây', 2, 0, 4, ['relax','romantic']),
+    p('Chùa Trấn Quốc', 'Hồ Tây', 1, 0, 3.5, ['culture','relax']),
+    p('Làng gốm Bát Tràng', 'Bát Tràng', 3, 50000, 3.5, ['culture','family']),
+  ],
+  'sa-pa': [
+    p('Chợ Sa Pa & ẩm thực', 'Trung tâm', 2, 150000, 4, ['food','culture']),
+    p('Núi Hàm Rồng', 'Trung tâm', 2, 70000, 3.5, ['nature','romantic']),
+    p('Bản Cát Cát', 'Cát Cát', 3, 70000, 4, ['culture','nature']),
+    p('Fansipan', 'Fansipan', 5, 800000, 5, ['adventure','nature']),
+    p('Thung lũng Mường Hoa', 'Mường Hoa', 4, 0, 4.5, ['nature','adventure']),
+    p('Thác Bạc', 'Thác Bạc', 2, 20000, 3.5, ['nature','family']),
+    p('Bản Tả Phìn', 'Tả Phìn', 3, 50000, 4, ['culture','relax']),
+    p('Cổng Trời Ô Quy Hồ', 'Ô Quy Hồ', 2, 0, 4, ['nature','adventure']),
+  ],
+};
